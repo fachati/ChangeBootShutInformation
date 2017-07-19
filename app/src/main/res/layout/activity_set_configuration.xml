@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greenLight"
+    tools:context="com.mobiwire.BootInformation.SetConfigurationActivity">
+
+    <Button
+        android:id="@+id/buttonStartFlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_change"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:onClick="clickStartFlash"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_button"
+
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="230dp" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/layoutProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:padding="20dp"
+        android:visibility="gone"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <net.bohush.geometricprogressview.GeometricProgressView
+            android:id="@+id/progressView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:gp_type="triangle"
+            app:gp_number_of_angles="9"
+            app:gp_color="@android:color/black"
+            app:gp_duration="800"
+            app:gp_figure_padding="3dp" />
+
+
+        <TextView
+            android:fontFamily="sans-serif-thin"
+            android:id="@+id/textStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOADING"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_alignBottom="@+id/progressView"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
